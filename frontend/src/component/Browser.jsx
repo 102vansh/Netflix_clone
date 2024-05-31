@@ -107,13 +107,13 @@ toast.error(error.response.data.message)
 
   
 
-  // useEffect(()=>{
+  useEffect(()=>{
     
-  //  nowplaying()
-  //  popularmovie()
-  //  topratedmovie()
-  //  upcommingmovie()
-  //  })
+   nowplaying()
+   popularmovie()
+   topratedmovie()
+   upcommingmovie()
+   })
 
    const togglehandler = () =>{
     dispatch(settoggle())
