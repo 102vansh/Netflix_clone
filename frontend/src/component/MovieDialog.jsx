@@ -30,7 +30,7 @@ const handleClose =() =>{
       
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-          <Viedeoback movieid={id}/>
+          <Viedeoback movieid={id} bool={true}/>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

@@ -4,7 +4,7 @@ import { options } from '../utils/Contraint'
 import { useDispatch, useSelector } from 'react-redux'
 import { settrailer } from './MovieSlice'
 
-const Viedeoback = ({movieid}) => {
+const Viedeoback = ({movieid,bool}) => {
   const dispatch = useDispatch()
   const trailers = useSelector((store)=>store.movie.trailer)
   const movieids = async(movieid)=>{
@@ -27,7 +27,7 @@ console.log(error)
  
   return (
     <div className='w-screen '>
-      <iframe className='w-screen aspect-video' src={`https://www.youtube.com/embed/${trailers?.key}?i=BKOPsOP3SHBIf6HF&autoplay=1&mute=1`} title="Netflix  & chill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe className={` ${bool?'w-screen aspect-video':'w-[100%]'}`} src={`https://www.youtube.com/embed/${trailers?.key}?i=BKOPsOP3SHBIf6HF&autoplay=1&mute=1${bool ? 0 : 1}`} title="Netflix  & chill" frameborder="0"     allowfullscreen></iframe>
     </div>
   )
 }

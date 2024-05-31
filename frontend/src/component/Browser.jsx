@@ -127,7 +127,7 @@ toast.error(error.response.data.message)
     <img className='w-56' src='https://logohistory.net/wp-content/uploads/2023/05/Netflix-Logo.png'/>
 </div>
 <div className='flex justify-center items-center space-x-4 absolute top-6 right-8'>
-    {/* <div className='text-xl text-white font-bold'><h1>{user.name}</h1></div> */}
+     <div className='text-xl text-white font-bold'><h1>{user?.name}</h1></div> 
     <button onClick={logouthandler} className=' px-4 py-2 bg-red-700 text-lg rounded-md text-white'>Logout</button> 
    <Link to='/search'>  <button onClick={togglehandler} className='px-4 py-2 bg-red-700 text-lg rounded-md text-white'>{toggle ? 'Home' : 'Search Movies'}</button></Link>
 </div>

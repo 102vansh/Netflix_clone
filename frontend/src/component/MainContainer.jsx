@@ -10,7 +10,7 @@ const Maincontainer = () => {
   return (
     <div>
        <Viedeoititle title={title} overview ={overview}/> 
-       <Viedeoback movieid = {id}/>
+       <Viedeoback movieid = {id} bool={true}/>
     </div>
   )
 }
