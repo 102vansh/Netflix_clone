@@ -1,0 +1,10 @@
+const express = require('express')
+const{isauth} = require('../middleware/isauth')
+const {createproject, getallproject, getsingleproject, updateproject, deleteproject} = require('../controllers/project.controller')
+const router = express.Router()
+router.route('/create').post(isauth,createproject)
+router.route('/allproject').get(isauth,getallproject)
+router.route('/singleproject/:id').get(isauth,getsingleproject)
+router.route('/update').put(isauth,updateproject)
+router.route('/delete').delete(isauth,deleteproject)
+module.exports = router

@@ -1,0 +1,48 @@
+User Model:
+
+_id
+username
+email
+password (hashed)
+createdAt
+
+
+Project Model:
+_id
+title
+description
+createdBy (references User)
+createdAt
+
+
+Task Model:
+_id
+title
+description
+deadline
+assignedTo (references User)
+project (references Project)
+createdAt
+
+
+Controllers
+User Controller:
+Register a new user
+Login an existing user
+
+Project Controller:
+Create a new project
+Get all projects for a user
+Get details of a specific project
+Update project details
+Delete a project
+
+
+Task Controller:
+Create a new task within a project
+Get all tasks for a project
+Get details of a specific task
+Update task details (e.g., title, description, deadline)
+Assign a task to a user
+Mark task as completed
+Delete a task
